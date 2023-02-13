@@ -14,6 +14,9 @@
 		F216D4D1299AC35A006E4BE6 /* ChatGPTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F216D4D0299AC35A006E4BE6 /* ChatGPTTests.swift */; };
 		F216D4DB299AC35A006E4BE6 /* ChatGPTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F216D4DA299AC35A006E4BE6 /* ChatGPTUITests.swift */; };
 		F216D4DD299AC35A006E4BE6 /* ChatGPTUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F216D4DC299AC35A006E4BE6 /* ChatGPTUITestsLaunchTests.swift */; };
+		F216D4EA299AC817006E4BE6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F216D4E9299AC817006E4BE6 /* Constants.swift */; };
+		F216D4EC299AC83C006E4BE6 /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F216D4EB299AC83C006E4BE6 /* OpenAIService.swift */; };
+		F216D4EF299AC936006E4BE6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F216D4EE299AC936006E4BE6 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,8 @@
 		F216D4D6299AC35A006E4BE6 /* ChatGPTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatGPTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F216D4DA299AC35A006E4BE6 /* ChatGPTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTUITests.swift; sourceTree = "<group>"; };
 		F216D4DC299AC35A006E4BE6 /* ChatGPTUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F216D4E9299AC817006E4BE6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F216D4EB299AC83C006E4BE6 /* OpenAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F216D4EF299AC936006E4BE6 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +104,8 @@
 				F216D4C1299AC358006E4BE6 /* ContentView.swift */,
 				F216D4C3299AC35A006E4BE6 /* Assets.xcassets */,
 				F216D4C5299AC35A006E4BE6 /* Preview Content */,
+				F216D4E9299AC817006E4BE6 /* Constants.swift */,
+				F216D4EB299AC83C006E4BE6 /* OpenAIService.swift */,
 			);
 			path = ChatGPT;
 			sourceTree = "<group>";
@@ -143,6 +151,9 @@
 			dependencies = (
 			);
 			name = ChatGPT;
+			packageProductDependencies = (
+				F216D4EE299AC936006E4BE6 /* Alamofire */,
+			);
 			productName = ChatGPT;
 			productReference = F216D4BC299AC358006E4BE6 /* ChatGPT.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +226,9 @@
 				Base,
 			);
 			mainGroup = F216D4B3299AC358006E4BE6;
+			packageReferences = (
+				F216D4ED299AC936006E4BE6 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = F216D4BD299AC358006E4BE6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,6 +273,8 @@
 			files = (
 				F216D4C2299AC358006E4BE6 /* ContentView.swift in Sources */,
 				F216D4C0299AC358006E4BE6 /* ChatGPTApp.swift in Sources */,
+				F216D4EA299AC817006E4BE6 /* Constants.swift in Sources */,
+				F216D4EC299AC83C006E4BE6 /* OpenAIService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +599,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F216D4ED299AC936006E4BE6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F216D4EE299AC936006E4BE6 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F216D4ED299AC936006E4BE6 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F216D4B4299AC358006E4BE6 /* Project object */;
 }
